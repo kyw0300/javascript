@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- async vs defer -->
+    <!-- 1) head안에 js파일
+    - 중간에 js파일 다운,실행 후 페이지 준비(준비가 오래걸림)
+    2) body 끝에 js파일
+    - js파일 전에 페이지 준비 완료, 웹 사이트가 js파일에 의존적이라면 부적합
+    3) head + async 
+    - 페이지 파싱, js파일 다운로드 동시에 이루어짐. js파일 실행 시 페이지 돔 요소가 필요한 경우 부적합
+    4) head + defer (가장 베스트)
+    - 페이지 파싱, js파일 다운로드 동시에 이루어짐. 페이지 파싱 후 js파일 실행됨. -->
+    <script defer src="variable.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
