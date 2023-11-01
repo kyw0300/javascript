@@ -14,19 +14,18 @@ let globalName = 'global name';
     console.log(name);
     console.log(globalName);
 }
-console.log(name);
+console.log(name);  // console에 출력 안됨
 console.log(globalName);
 
 // var (don't ever use this!)
 // var hoisting (move declaration from bottom to top)
 // has no block scope
-
-// console.log("age",age);
+console.log("age",age); // undifined
 {
     age = 18;
     var age;
 }
-console.log("age",age);
+console.log("age",age); // 18
 
 // 3. Contants
 // favor immutable data type always for a few reasons:
