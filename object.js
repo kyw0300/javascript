@@ -108,3 +108,34 @@ const fruit2 = { color: 'blue', size: 'big' };
 const mixed = Object.assign({}, fruit1, fruit2);    // 값이 덮어쓰기가 됨
 console.log(mixed.color);   // blue 출력
 console.log(mixed.size);    // big 출력
+
+// 배열식 접근법 연습
+let name = "merong";
+var daeman  = {                 // new Object()
+    name:"대만",                // 속성명은 변수처리 안됨! 왱? 문자열 처리되기 때문에
+    role: "농구선수",
+    songs: ["또뽀뽀", "뽀로로"]
+};
+console.log('daeman', daeman);
+
+// 배열식 접근법 -> 무지막지 중요 -> 무조건 연습 -> 숟가락이 외울 정도롱 -> 연봉 많이 올라감!
+var name2 = "음하하하!";
+var taewoong = {
+    [name]: "태웅2",    // 위의 merong이 key로 들어감
+    ["3"]: ["3", "33"],
+    ["4"]: ["4", "44"],
+    ["1"]: "농구선수2",
+    ["2"]: ["뽀뽀뽀2", "뽀로로2"]
+};
+// taewoong.3 = "ppp"; 요건 변수 선언 규칙 위반(숫자를 변수명이 시작될 순 없당)
+
+console.log('taewoong', taewoong);
+console.log('taewoong[1]', taewoong[1]);    // 왜 이 2개가 같을까?
+console.log('taewoong[1]', taewoong['1']);  // 왜 이 2개가 같을까?
+console.log('taewoong[2]', taewoong[2]);
+
+console.log("prac1", taewoong['3']);
+console.log("prac2", taewoong[name]);
+console.log("prac3", taewoong['merong']);
+
+
