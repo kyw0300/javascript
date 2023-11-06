@@ -72,7 +72,7 @@ console.log(jdm.random);
 
 // 6. for..in vs for..of
 // for (key in obj)
-console.clear();
+// console.clear();
 for (let key in jdm) {
   console.log(key);
 }
@@ -96,7 +96,7 @@ const user3 = {};
 for (let key in user) {
   user3[key] = user[key];
 }
-console.clear();
+// console.clear();
 console.log(user3);
 
 const user4 = Object.assign({}, user);
