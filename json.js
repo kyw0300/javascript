@@ -38,6 +38,8 @@ console.log(json);
 // parse(json)
 json = JSON.stringify(rabbit);
 console.log(json);
+
+// 함수는 stringify에 추가되지 않으므로 parse를 다시 해줘도 함수가 생기지 않음
 // const obj = JSON.parse(json);
 const obj = JSON.parse(json, (key, value) => {
     console.log(`key: ${key}, value: ${value}`);
@@ -45,7 +47,7 @@ const obj = JSON.parse(json, (key, value) => {
 });
 console.log(obj);
 rabbit.jump();
-// obj.jump();
+// obj.jump();  // jump 함수가 없음
 
-console.log(rabbit.birthDate.getDate());
-console.log(obj.birthDate.getDate());
+console.log("rabbit birthDate", rabbit.birthDate.getDate());
+console.log("obj birthDate", obj.birthDate.getDate());
