@@ -5,11 +5,11 @@
 
 // 1. Object to JSON
 // stringfy(obj)
-let json = JSON.stringify(true);
-console.log(json);
+let json1 = JSON.stringify(true);
+console.log("json1", json1);
 
-json = JSON.stringify(['apple', 'banana']);
-console.log(json);
+let json2 = JSON.stringify(['apple', 'banana']);
+console.log("json2", json2);
 
 const rabbit = {
     name: 'tori',
@@ -21,10 +21,10 @@ const rabbit = {
     },
 };
 
-json = JSON.stringify(rabbit);
+let json = JSON.stringify(rabbit);
 console.log("rabbit", json);
 
-json = JSON.stringify(rabbit, ['name', 'color', 'size']);
+json = JSON.stringify(rabbit, ['name', 'color', 'size']);   // 원하는 properties만 전달할 수 있음
 console.log(json);
 
 // 좀 더 세밀하게 통제하고 싶을 때 사용
@@ -32,12 +32,12 @@ json = JSON.stringify(rabbit, (key, value) => {
     console.log(`key: ${key}, value: ${value}`);
     return key === 'name' ? 'jeongdaeman' : value;
 });
-console.log(json);
+console.log("rabbit json", json);
 
 // 2. JSON to Object
 // parse(json)
 json = JSON.stringify(rabbit);
-console.log(json);
+console.log("JSON.stringify(rabbit)", json);
 
 // 함수는 stringify에 추가되지 않으므로 parse를 다시 해줘도 함수가 생기지 않음
 // const obj = JSON.parse(json);
@@ -45,7 +45,7 @@ const obj = JSON.parse(json, (key, value) => {
     console.log(`key: ${key}, value: ${value}`);
     return key === 'birthDate' ? new Date(value) : value;
 });
-console.log(obj);
+console.log("obj", obj);
 rabbit.jump();
 // obj.jump();  // jump 함수가 없음
 
