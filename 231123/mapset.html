@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map과 Set</title>
+</head>
+<script>
+// Map
+// 객체에서 '키'에는 문자열만 사용할 수 있다. Map에서는 키에 모든 값 사용 가능
+// 객체에는 여러 정보를 담을 수 있지만 프로퍼티 간에 순서가 없다. Map과 Set에는 순서가 있음
+// for 문과 같은 반복문을 사용해서 객체의 프로처티를 반복할 수 없다. Map과 Set은 for... of 와 같은 반복문 사용 가능
+// 객체에는 프로처티의 개수를 알려주는 등의 프로퍼티가 없다. Map과 Set에는 별도의 프로퍼티와 메서드를 가지고 있음.
+let kyw = new Map();
+kyw.set('name', 'koyoungwoo');
+
+console.log('kyw', kyw);
+
+let iphone = new Map([
+    ['name', 'iphone14 plus'],
+    ['color', 'black'],
+    ['gb', '128gb']
+]);
+
+console.log("iphone", iphone);
+
+// Map은 iterable 객체
+// iterable 객체란, 객체의 값을 순서대로 처리할 수 있는 객체를 말한다.
+// 객체는 순서가 없어 iterable 객체가 아니므로 순서대로 처리하려면 iterable 객체로 변환해야 한다.
+
+</script>
+<body>
+    
+</body>
+</html>
